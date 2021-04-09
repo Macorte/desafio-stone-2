@@ -11,7 +11,7 @@ O priemiro passo foi plotar o histograma abaixo para que fosse possível vizuali
 
 ![Captura de Tela 2021-04-09 às 09 27 34](https://user-images.githubusercontent.com/62664736/114179795-d31a2100-9915-11eb-9025-0d57d0421102.png)
 
-Após a vizualização, foi calculada a média da coluna *age* dessa forma chegando ao valor de **35,06**.
+Após a vizualização, foi calculada a média da coluna `age` dessa forma chegando ao valor de **35,06**.
 
 **Conclusão:**  A média de idades dos clientes é igual a 35.06, ou seja, aproximadamente 35 anos. Através do gráfico de frequência é possível observar que apesar da média ter o valor de 35.06, a distribuição das idades é bem variada indicando que a média de idade não é uma variável significativa para identificar algum padrão no *dataset* de clientes, sendo inclusive o intervalo de 35 anos um dos intervalos que possue uma das menores quantidades de dados.
 
@@ -28,6 +28,24 @@ Após a vizualização foi possível notar que a `card_family` **Gold** e **Plat
 Com essa vizualização ficou ainda mais claro que para a `card_family` **Gold** e **Platinum** há um intervalo de `credit_limit` bem definido, para a confirmação dessa hipótese, foi dividido os dados em grupos de acordo com a `card_family` e retornada as estatísticas abaixo:
 
 ![Captura de Tela 2021-04-09 às 09 47 36](https://user-images.githubusercontent.com/62664736/114182082-a0255c80-9918-11eb-96a4-5b1273709c26.png)
+
+Apartir das estatísticas observadas é possível determinar que para as `card_family` **Gold** e **Platinum** o intervalo de `credit_limit` é:
+
+- **Gold** [2.000 - 50.000]
+- **Platinum** [51.000 - 200.000]
+
+Para o **Premium** atravé desses testes não foi possível determinar um `credit_limit` por conta disso foi plotado um boxplot para que fosse possível identificar outliers:
+
+![Captura de Tela 2021-04-09 às 10 00 16](https://user-images.githubusercontent.com/62664736/114183759-65bcbf00-991a-11eb-85bc-21f7efc17d01.png)
+
+Após a vizualização do boxplot, não foi identificado outliers, assim não foi possível determinar algum padrão para a `card_family` **Premium**.
+
+**Conclusão:** Após a relização das vizualizações dos gráficos e das estatísticas foi possível determinar as seguintes relações entre `card_family` e `credit_limit`:
+
+- **Gold:** O `credit_limit` para essa família é determinado no intervalo entre [2.000 - 50.000].
+- **Platinum:** O `credit_limit` para esssa família é determinado no intervalo entre [51.000 - 200.000].
+- **Premium:** Para essa família não foi possível determinar um intervlo de limite, apenas é possível concluir que se o `credit_limit` > 200.000 a `card_family` é **Premium**.
+
  
 
 
