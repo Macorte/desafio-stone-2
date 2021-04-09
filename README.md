@@ -58,7 +58,18 @@ Para a realização dessa tarefa, foi necessário a realização de 5 testes com
 
 #### Teste 1:Em algum intervalo de valor de transação há uma maior ocorrência de transações fraudulentas
 
-Para esses teste foi preciso fazer a seleçāo 
+Para esses teste foi preciso fazer a seleçāo das `frauds` no *dataset* `transactions`, gerando assim o *dataset* `fraud_transactions`. Após a criação desse novo *dataset* foi plotado o histograma abaixo:
+
+![Captura de Tela 2021-04-09 às 10 29 33](https://user-images.githubusercontent.com/62664736/114187534-7c651500-991e-11eb-9e08-1b1da7206310.png)
+
+Com a vizualização do histogram foi possível vizualizar uma discrepância significativa no intervalo das transações com valor entre 30.000 e 40.000, após essa vizualização as `frauds_transactions` foram divididas em intervalos de 10.000 de acordo com o `value`, com essa separação e a vizualização das principais estatísticas foi possível notar que no intervalo de 30.000 e 40.000 há aproximadamente o dobro de ocorrência de transações fraudulentas, como ilustra a tabela abaixo:
+
+![Captura de Tela 2021-04-09 às 10 35 54](https://user-images.githubusercontent.com/62664736/114188291-5f7d1180-991f-11eb-8e3b-7aeff7654f30.png)
+
+**Conclusão Teste 1:** A partir do histograma  é possível notar uma ocorrência maior no intervalo entre 30K e 40K, separando esses intervalos e analisando seus dados foi possível determinar que no intervalo de 30.000 a 40.000 há aproximadamente o dobro de ocorrência de fraudes.
+
+
+
  
 
 
