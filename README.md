@@ -56,7 +56,7 @@ Para esse desafio foi preciso fazer a seleção das `frauds` detro do *dataset* 
 
 Para a realização dessa tarefa, foi necessário a realização de 5 testes com o objetivo de encontrar alguma relação com o *dataset* de `frauds` com os outros *dataset*.
 
-#### Teste 1:Em algum intervalo de valor de transação há uma maior ocorrência de transações fraudulentas
+#### Teste 1:Em algum intervalo de valor de transação há uma maior ocorrência de transações fraudulentas.
 
 Para esses teste foi preciso fazer a seleçāo das `frauds` no *dataset* `transactions`, gerando assim o *dataset* `fraud_transactions`. Após a criação desse novo *dataset* foi plotado o histograma abaixo:
 
@@ -67,6 +67,29 @@ Com a vizualização do histogram foi possível vizualizar uma discrepância sig
 ![Captura de Tela 2021-04-09 às 10 35 54](https://user-images.githubusercontent.com/62664736/114188291-5f7d1180-991f-11eb-8e3b-7aeff7654f30.png)
 
 **Conclusão Teste 1:** A partir do histograma  é possível notar uma ocorrência maior no intervalo entre 30K e 40K, separando esses intervalos e analisando seus dados foi possível determinar que no intervalo de 30.000 a 40.000 há aproximadamente o dobro de ocorrência de fraudes.
+
+#### Teste 2: A `card_family` tem relação com as transações fraudulentas.
+
+Para esses teste foi necessário adcionar a `card_family` ao *dataset* de `frauds_transactions` após isso foram plotados os gráficos abaixo:
+
+![Captura de Tela 2021-04-09 às 10 41 40](https://user-images.githubusercontent.com/62664736/114189091-2e511100-9920-11eb-9e0b-3fe713bbe13d.png)
+
+Esse primeiro gráfico tinha como objetivo identificar algum padrão na distribuição das transações pelo valor da transferência e pela `card_family`. Com a vizualização do gráfico não foi possível retirar nada de substancial.
+
+![Captura de Tela 2021-04-09 às 10 44 59](https://user-images.githubusercontent.com/62664736/114189502-a586a500-9920-11eb-86e8-f9fe16e401ad.png)
+
+Esse segundo gráfico tinha como objetivo separar as transações pela `card_family` para facilitar ainda mais a vizualização da relação da `card_family` e o valor das transações fraudulentas. Com a vizualização do gráfico não foi possivel retira nada de substancial.
+
+![Captura de Tela 2021-04-09 às 10 48 32](https://user-images.githubusercontent.com/62664736/114189936-22b21a00-9921-11eb-93e3-ace72721fa05.png)
+
+O terceiro gráfico foi um histograma que tinha como objetivo identificar uma maior ocorrência de fraudes de acordo com a `card_family`. Com esse gráfico foi possível notar uma maior ocorrência em cartões com a família **Premium**, porém a discrepância aparentemente não é significativa para que se tirasse alguma conclusão.
+
+Após a observação do gráfico, foi dividido o *dataset* `fraud_transactions` em grupos de acordo com a `card_family`, com essa separação foi retornada as estatísticas abaixo:
+
+![Captura de Tela 2021-04-09 às 10 58 30](https://user-images.githubusercontent.com/62664736/114191188-87ba3f80-9922-11eb-8f89-5473daacdd26.png)
+
+
+
 
 
 
