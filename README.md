@@ -29,7 +29,7 @@ Com essa vizualização ficou ainda mais claro que para a `card_family` **Gold**
 
 ![Captura de Tela 2021-04-09 às 09 47 36](https://user-images.githubusercontent.com/62664736/114182082-a0255c80-9918-11eb-96a4-5b1273709c26.png)
 
-Apartir das estatísticas observadas é possível determinar que para as `card_family` **Gold** e **Platinum** o intervalo de `credit_limit` é:
+A partir das estatísticas observadas é possível determinar que para as `card_family` **Gold** e **Platinum** o intervalo de `credit_limit` é:
 
 - **Gold** [2.000 - 50.000]
 - **Platinum** [51.000 - 200.000]
@@ -48,7 +48,7 @@ Após a vizualização do boxplot, não foi identificado outliers, assim não fo
 
 ### - For the transactions flagged as fraud, what are the ids of the transactions with the highest value?
 
-Para esse desafio foi preciso fazer a seleção das `frauds` detro do *dataset* `transactions`, apartir disso foi gerado um novo *dataset* contendo apenas as transações fraudulentas, esse novo *dataset* foi organizado em ordem decrescente de acordo com a coluna `value`. Com isso para obter o `id` da transação fraudulenta de maior valor, bastou apenas retornar a primeira linha do *dataset* `frauds_transactions`.
+Para esse desafio foi preciso fazer a seleção das `frauds` detro do *dataset* `transactions`, a partir disso foi gerado um novo *dataset* contendo apenas as transações fraudulentas, esse novo *dataset* foi organizado em ordem decrescente de acordo com a coluna `value`. Com isso para obter o `id` da transação fraudulenta de maior valor, bastou apenas retornar a primeira linha do *dataset* `frauds_transactions`.
 
 **Conclusão:** A transação fraudulenta de maior valor tem o `id` = CTID20567160 e o `value` = 49155R$.
 
@@ -56,7 +56,7 @@ Para esse desafio foi preciso fazer a seleção das `frauds` detro do *dataset* 
 
 Para a realização dessa tarefa, foi necessário a realização de 5 testes com o objetivo de encontrar alguma relação com o *dataset* de `frauds` com os outros *dataset*.
 
-**Nesse Desafio o *dataset* `frauds_transactions` contêm apenas as transações fraudulentas independente das adições feitas a ele.**
+- Nesse Desafio o *dataset* `frauds_transactions` contêm apenas as transações fraudulentas independente das adições feitas a ele.
 
 #### Teste 1:Em algum intervalo de valor de transação há uma maior ocorrência de transações fraudulentas.
 
@@ -112,17 +112,36 @@ Para realizar esse teste foi necessário a adicionar ao *dataset* `fraud_transac
 
 ![Captura de Tela 2021-04-09 às 11 36 54](https://user-images.githubusercontent.com/62664736/114196598-e635ec80-9927-11eb-882c-ec6bd3f088ea.png)
 
-A primeira vizualização feita, foi apartir desse histograma, com essa vizualização dá para notar que no intervalo de [40 - 45] anos aparentemente há uma maior ocorrência de fraudes. Com isso foi plotado o gráfico abaixo no intuito de vizualizar melhor essa distribuição.
+A primeira vizualização feita, foi a partir desse histograma, com essa vizualização dá para notar que no intervalo de [40 - 45] anos aparentemente há uma maior ocorrência de fraudes. Com isso foi plotado o gráfico abaixo no intuito de vizualizar melhor essa distribuição.
 
 ![Captura de Tela 2021-04-09 às 11 43 11](https://user-images.githubusercontent.com/62664736/114197484-c5ba6200-9928-11eb-8261-a92d50e845fd.png)
 
-Apartir dessa segunda vizualização, a hipótese gerada no gráfico anterior se demonstra inválida já que nesse segundo gráfico a distribuição das das transações fraudulentas pela idade dos clientes parece não seguir nenhum padrão.
+A partir dessa segunda vizualização, a hipótese gerada no gráfico anterior se demonstra inválida já que nesse segundo gráfico a distribuição das das transações fraudulentas pela idade dos clientes parece não seguir nenhum padrão.
 
 Com as duas vizualizações para definir uma conclusão concreta foi separado as transações em intervalos de idades e retirado seus dados, como ilustra a tabela abaixo:
 
 ![Captura de Tela 2021-04-09 às 11 49 01](https://user-images.githubusercontent.com/62664736/114198353-98ba7f00-9929-11eb-829c-dd79d58bbb19.png)
 
 **Conclusão Teste 4:** Preparando o dataset e plotando o histograma, foi possível vizualizar uma discrepância no intervalo de 40 a 45 anos, já no outro gráfico indica que não há uma dispersão padronizada, separando as idades em intervalos e observando os dados é possível concluir que não há um padrão quanto a idade dos clientes que tiveram seus cartões fraudados, ou seja, podemos concluir que a idade não possui relação significante com as transações fraudulentas.
+
+### Teste 5: O `credit_limit` tem relação com as transações fraudulentas.
+
+Nesse desafio foi necessário adicionar o `credit_limit` ao *dataset* `fraud_transactions`. A partir dessa adição foram plotados os seguintes gráficos:
+
+![Captura de Tela 2021-04-09 às 12 01 46](https://user-images.githubusercontent.com/62664736/114200226-5f830e80-992b-11eb-81c3-8c55f67aece0.png)
+
+Com esse histograma é possível notar que a maior parte das transações fraudulentas possui um `credit_limit`  <= 200.000. A partir dessa obsevaçāo foi plotado um segundo gráfico com a distribuição das transferências fraudulentas pelo limite do cartão de acordo com a família do cartão.
+
+![Captura de Tela 2021-04-09 às 12 05 35](https://user-images.githubusercontent.com/62664736/114200775-e801af00-992b-11eb-91a2-c6a5d63c5e5e.png)
+
+Nessa segunda observaçāo é possível notar que a maior parte das transações com `credit_limit`  <= 200.000 são feitas a partir de cartões de `card_family` **Gold** ou **Platinum**, que como observado no ranqueamento do cartão possuem limite máximo <= 200.000. Devido a esse fato é possível descartar essa relação.
+
+**Conclusão Teste 5:** Vizualizando os dois gráficos é possível determinar que a maior parte das transações fraudilentas são feitas de cartões com limite menor que 200K, porém considerando 64 das 109 transações são feitas de cartões **Gold** e **Platinum** que possuem um limite máximo menor ou igual a 200K, a variável observada demonstra não possuir significância para a análise em questão, permitindo concluir que não há uma relação significante entre as transações fraudulentas e o limite do cartão.
+
+### Conclusão Geral
+
+Após a realização de todos os testes, é possível concluir que o único dado obtido que possui alguma significância é o fato de que no intervalo de transações fraudulentas com valor entre 30K e 40K, há aproximadamente o dobro de ocorrência de fraudes. Nos demais teste não foi possível observar mas nenhuma relação significantes entre os dados observados e as transações fraudulentas.
+
 
 
 
