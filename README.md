@@ -138,7 +138,7 @@ Nessa segunda observaçāo é possível notar que a maior parte das transações
 
 **Conclusão Teste 5:** Vizualizando os dois gráficos é possível determinar que a maior parte das transações fraudilentas são feitas de cartões com limite menor que 200K, porém considerando 64 das 109 transações são feitas de cartões **Gold** e **Platinum** que possuem um limite máximo menor ou igual a 200K, a variável observada demonstra não possuir significância para a análise em questão, permitindo concluir que não há uma relação significante entre as transações fraudulentas e o limite do cartão.
 
-### Conclusão Geral
+## Conclusão Geral
 
 Após a realização de todos os testes, é possível concluir que o único dado obtido que possui alguma significância é o fato de que no intervalo de transações fraudulentas com valor entre 30K e 40K, há aproximadamente o dobro de ocorrência de fraudes. Nos demais teste não foi possível observar mas nenhuma relação significantes entre os dados observados e as transações fraudulentas.
 
