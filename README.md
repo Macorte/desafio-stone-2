@@ -51,6 +51,14 @@ Após a vizualização do boxplot, não foi identificado outliers, assim não fo
 Para esse desafio foi preciso fazer a seleção das `frauds` detro do *dataset* `transactions`, apartir disso foi gerado um novo *dataset* contendo apenas as transações fraudulentas, esse novo *dataset* foi organizado em ordem decrescente de acordo com a coluna `value`. Com isso para obter o `id` da transação fraudulenta de maior valor, bastou apenas retornar a primeira linha do *dataset* `frauds_transactions`.
 
 **Conclusão:** A transação fraudulenta de maior valor tem o `id` = CTID20567160 e o `value` = 49155R$.
+
+### - Analyze whether or not the fraudulent transactions are somehow associated to other features in the dataset. Explain your results.
+
+Para a realização dessa tarefa, foi necessário a realização de 5 testes com o objetivo de encontrar alguma relação com o *dataset* de `frauds` com os outros *dataset*.
+
+#### Teste 1:Em algum intervalo de valor de transação há uma maior ocorrência de transações fraudulentas
+
+Para esses teste foi preciso fazer a seleçāo 
  
 
 
