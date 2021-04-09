@@ -56,7 +56,7 @@ Para esse desafio foi preciso fazer a seleção das `frauds` detro do *dataset* 
 
 Para a realização dessa tarefa, foi necessário a realização de 5 testes com o objetivo de encontrar alguma relação com o *dataset* de `frauds` com os outros *dataset*.
 
-**Nesse Desafio o *dataset* `frauds_transactions` contêm apenas as transações fraudulentas independente das adições feitas a ele.
+**Nesse Desafio o *dataset* `frauds_transactions` contêm apenas as transações fraudulentas independente das adições feitas a ele.**
 
 #### Teste 1:Em algum intervalo de valor de transação há uma maior ocorrência de transações fraudulentas.
 
