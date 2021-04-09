@@ -56,6 +56,8 @@ Para esse desafio foi preciso fazer a seleção das `frauds` detro do *dataset* 
 
 Para a realização dessa tarefa, foi necessário a realização de 5 testes com o objetivo de encontrar alguma relação com o *dataset* de `frauds` com os outros *dataset*.
 
+**Nesse Desafio o *dataset* `frauds_transactions` contêm apenas as transações fraudulentas independente das adições feitas a ele.
+
 #### Teste 1:Em algum intervalo de valor de transação há uma maior ocorrência de transações fraudulentas.
 
 Para esses teste foi preciso fazer a seleçāo das `frauds` no *dataset* `transactions`, gerando assim o *dataset* `fraud_transactions`. Após a criação desse novo *dataset* foi plotado o histograma abaixo:
@@ -87,6 +89,47 @@ O terceiro gráfico foi um histograma que tinha como objetivo identificar uma ma
 Após a observação do gráfico, foi dividido o *dataset* `fraud_transactions` em grupos de acordo com a `card_family`, com essa separação foi retornada as estatísticas abaixo:
 
 ![Captura de Tela 2021-04-09 às 10 58 30](https://user-images.githubusercontent.com/62664736/114191188-87ba3f80-9922-11eb-8f89-5473daacdd26.png)
+
+**Conclusão Teste 2:** A partir dos gráficos não é possível vizualizar nenhum padrão significante, separando os dados pela família do cartão e olhando suas principais estatísticas támbem não é possível chegar a nenhuma conclusão plausível. Dessa forma podemos afirmar que a família do cartão não tem relação significante com as transações fraudulentas.
+
+### Teste 3: Há relação entre as datas das transações e as transações fraudulentas.
+
+Para esse desafio, foi necessário gerar um *dataset* com a o numero de transações fraudulentas por mês. Após isso foram gerado gráficos para que fosse possível identificar discrepâncias.
+
+![Captura de Tela 2021-04-09 às 11 09 29](https://user-images.githubusercontent.com/62664736/114192604-0fed1480-9924-11eb-8c69-da4c52ecfd3c.png)
+
+Com essa primeira vizualização foi possível notar uma diferença aparentemente significativa no mês 09 , porém já tendo vizualizado as quantidades de transações de acordo com os meses, é notável que essa diferênça tão assimétrica foi fruto da escala do gráfico. Corrigindo essa escala temos essa nova vizualização.
+
+![Captura de Tela 2021-04-09 às 11 16 27](https://user-images.githubusercontent.com/62664736/114193562-09ab6800-9925-11eb-8ec2-9d98c221e51d.png)
+
+Com o novo gráfico se conclui que a diferença observada anteriormente era fruto da escala.
+
+**Conclusão Teste 3:** Após separar a ocorrência de fraudes por mês e gerar a primeira time series, foi possível vizualizar uma discrepância aparentemente significativa no mês 09, porém analizando os valores foi possível concluir que essa discrepância era fruto da escala do gráfico, após a correção da escala e a analize dos valores foi possível concluir que as transações fraudulentas não possuem uma relação significativa com a data.
+
+### Teste 4: A idade dos clientes tem relação com as trasações fraudulentas.
+
+Para realizar esse teste foi necessário a adicionar ao *dataset* `fraud_transactions` os dados `customer_id` e `age`. Após essa adição foram plotados gráficos para identificar alguma relação entre `age` e as transações fraudulentas.
+
+![Captura de Tela 2021-04-09 às 11 36 54](https://user-images.githubusercontent.com/62664736/114196598-e635ec80-9927-11eb-882c-ec6bd3f088ea.png)
+
+A primeira vizualização feita, foi apartir desse histograma, com essa vizualização dá para notar que no intervalo de [40 - 45] anos aparentemente há uma maior ocorrência de fraudes. Com isso foi plotado o gráfico abaixo no intuito de vizualizar melhor essa distribuição.
+
+![Captura de Tela 2021-04-09 às 11 43 11](https://user-images.githubusercontent.com/62664736/114197484-c5ba6200-9928-11eb-8261-a92d50e845fd.png)
+
+Apartir dessa segunda vizualização, a hipótese gerada no gráfico anterior se demonstra inválida já que nesse segundo gráfico a distribuição das das transações fraudulentas pela idade dos clientes parece não seguir nenhum padrão.
+
+Com as duas vizualizações para definir uma conclusão concreta foi separado as transações em intervalos de idades e retirado seus dados, como ilustra a tabela abaixo:
+
+![Captura de Tela 2021-04-09 às 11 49 01](https://user-images.githubusercontent.com/62664736/114198353-98ba7f00-9929-11eb-829c-dd79d58bbb19.png)
+
+**Conclusão Teste 4:** Preparando o dataset e plotando o histograma, foi possível vizualizar uma discrepância no intervalo de 40 a 45 anos, já no outro gráfico indica que não há uma dispersão padronizada, separando as idades em intervalos e observando os dados é possível concluir que não há um padrão quanto a idade dos clientes que tiveram seus cartões fraudados, ou seja, podemos concluir que a idade não possui relação significante com as transações fraudulentas.
+
+
+
+
+
+
+
 
 
 
