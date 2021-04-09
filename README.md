@@ -21,7 +21,7 @@ O primeiro passo foi plotar um gráfico para ilustrar a distribuição dos clien
 
 ![Captura de Tela 2021-04-09 às 09 40 02](https://user-images.githubusercontent.com/62664736/114181185-918a7580-9917-11eb-856f-75e123bb0f48.png)
 
-Após a vizualização foi possível notar que a `card_family` **Gold** e **Platinum** aparentemente possuiam uma faixa de limite bem definida, para facilitar ainda mais essa vizualização foi plotado outo gráfioco, dessa vez, ilustrando o limite dos cartões de acordo com sua família.
+Após a vizualização foi possível notar que a `card_family` **Gold** e **Platinum** aparentemente possuiam uma faixa de limite bem definida, para facilitar ainda mais essa vizualização foi plotado outro gráfico, dessa vez, ilustrando o limite dos cartões de acordo com sua família.
 
 ![Captura de Tela 2021-04-09 às 09 44 05](https://user-images.githubusercontent.com/62664736/114181633-22615100-9918-11eb-8bd2-74f36f7e4f71.png)
 
