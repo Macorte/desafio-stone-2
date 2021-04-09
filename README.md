@@ -140,21 +140,4 @@ Nessa segunda observaçāo é possível notar que a maior parte das transações
 
 ## Conclusão Geral
 
-Após a realização de todos os testes, é possível concluir que o único dado obtido que possui alguma significância é o fato de que no intervalo de transações fraudulentas com valor entre 30.000 e 40.000, há aproximadamente o dobro de ocorrência de fraudes. Nos demais teste não foi possível observar mas nenhuma relação significativas entre os dados observados e as transações fraudulentas.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
+Após a realização de todos os testes, é possível concluir que o único dado obtido que possui alguma significância é o fato de que no intervalo de transações fraudulentas com valor entre 30.000 e 40.000, há aproximadamente o dobro de ocorrência de fraudes. Nos demais teste não foi possível observar mais nenhuma relação significativas entre os dados observados e as transações fraudulentas.
