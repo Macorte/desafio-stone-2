@@ -68,7 +68,7 @@ Com a vizualização do histogram foi possível vizualizar uma discrepância sig
 
 ![Captura de Tela 2021-04-09 às 10 35 54](https://user-images.githubusercontent.com/62664736/114188291-5f7d1180-991f-11eb-8e3b-7aeff7654f30.png)
 
-**Conclusão Teste 1:** A partir do histograma  é possível notar uma ocorrência maior no intervalo entre 30K e 40K, separando esses intervalos e analisando seus dados foi possível determinar que no intervalo de 30.000 a 40.000 há aproximadamente o dobro de ocorrência de fraudes.
+**Conclusão Teste 1:** A partir do histograma  é possível notar uma ocorrência maior no intervalo entre 30.000 e 40.000, separando esses intervalos e analisando seus dados foi possível determinar que no intervalo de 30.000 a 40.000 há aproximadamente o dobro de ocorrência de fraudes.
 
 #### Teste 2: A `card_family` tem relação com as transações fraudulentas.
 
@@ -90,7 +90,7 @@ Após a observação do gráfico, foi dividido o *dataset* `fraud_transactions` 
 
 ![Captura de Tela 2021-04-09 às 10 58 30](https://user-images.githubusercontent.com/62664736/114191188-87ba3f80-9922-11eb-8f89-5473daacdd26.png)
 
-**Conclusão Teste 2:** A partir dos gráficos não é possível vizualizar nenhum padrão significante, separando os dados pela família do cartão e olhando suas principais estatísticas támbem não é possível chegar a nenhuma conclusão plausível. Dessa forma podemos afirmar que a família do cartão não tem relação significante com as transações fraudulentas.
+**Conclusão Teste 2:** A partir dos gráficos não é possível vizualizar nenhum padrão significativa, separando os dados pela família do cartão e olhando suas principais estatísticas támbem não é possível chegar a nenhuma conclusão plausível. Dessa forma podemos afirmar que a família do cartão não tem relação significativa com as transações fraudulentas.
 
 ### Teste 3: Há relação entre as datas das transações e as transações fraudulentas.
 
@@ -122,7 +122,7 @@ Com as duas vizualizações para definir uma conclusão concreta foi separado as
 
 ![Captura de Tela 2021-04-09 às 11 49 01](https://user-images.githubusercontent.com/62664736/114198353-98ba7f00-9929-11eb-829c-dd79d58bbb19.png)
 
-**Conclusão Teste 4:** Preparando o dataset e plotando o histograma, foi possível vizualizar uma discrepância no intervalo de 40 a 45 anos, já no outro gráfico indica que não há uma dispersão padronizada, separando as idades em intervalos e observando os dados é possível concluir que não há um padrão quanto a idade dos clientes que tiveram seus cartões fraudados, ou seja, podemos concluir que a idade não possui relação significante com as transações fraudulentas.
+**Conclusão Teste 4:** Preparando o dataset e plotando o histograma, foi possível vizualizar uma discrepância no intervalo de 40 a 45 anos, já no outro gráfico indica que não há uma dispersão padronizada, separando as idades em intervalos e observando os dados é possível concluir que não há um padrão quanto a idade dos clientes que tiveram seus cartões fraudados, ou seja, podemos concluir que a idade não possui relação significativa com as transações fraudulentas.
 
 ### Teste 5: O `credit_limit` tem relação com as transações fraudulentas.
 
@@ -136,11 +136,11 @@ Com esse histograma é possível notar que a maior parte das transações fraudu
 
 Nessa segunda observaçāo é possível notar que a maior parte das transações com `credit_limit`  <= 200.000 são feitas a partir de cartões de `card_family` **Gold** ou **Platinum**, que como observado no ranqueamento do cartão possuem limite máximo <= 200.000. Devido a esse fato é possível descartar essa relação.
 
-**Conclusão Teste 5:** Vizualizando os dois gráficos é possível determinar que a maior parte das transações fraudilentas são feitas de cartões com limite menor que 200K, porém considerando 64 das 109 transações são feitas de cartões **Gold** e **Platinum** que possuem um limite máximo menor ou igual a 200K, a variável observada demonstra não possuir significância para a análise em questão, permitindo concluir que não há uma relação significante entre as transações fraudulentas e o limite do cartão.
+**Conclusão Teste 5:** Vizualizando os dois gráficos é possível determinar que a maior parte das transações fraudulentas são feitas de cartões com limite menor que 200K, porém considerando 64 das 109 transações são feitas de cartões **Gold** e **Platinum** que possuem um limite máximo menor ou igual a 200K, a variável observada demonstra não possuir significância para a análise em questão, permitindo concluir que não há uma relação significativa entre as transações fraudulentas e o limite do cartão.
 
 ## Conclusão Geral
 
-Após a realização de todos os testes, é possível concluir que o único dado obtido que possui alguma significância é o fato de que no intervalo de transações fraudulentas com valor entre 30K e 40K, há aproximadamente o dobro de ocorrência de fraudes. Nos demais teste não foi possível observar mas nenhuma relação significantes entre os dados observados e as transações fraudulentas.
+Após a realização de todos os testes, é possível concluir que o único dado obtido que possui alguma significância é o fato de que no intervalo de transações fraudulentas com valor entre 30.000 e 40.000, há aproximadamente o dobro de ocorrência de fraudes. Nos demais teste não foi possível observar mas nenhuma relação significativas entre os dados observados e as transações fraudulentas.
 
 
 
