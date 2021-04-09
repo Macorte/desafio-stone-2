@@ -7,4 +7,4 @@ Para a resolução desse desafio foi utilizado Python através de notebooks Jupy
 
 ### - What is the average age of the customers in the database?:
 
-![hist1](file:///var/folders/01/vzkn2xtd7w53y6r6lxz7_jlc0000gn/T/TemporaryItems/NSIRD_screencaptureui_1xiLXK/Captura%20de%20Tela%202021-04-09%20a%CC%80s%2009.25.23.png)
+![Captura de Tela 2021-04-09 às 09 27 34](https://user-images.githubusercontent.com/62664736/114179795-d31a2100-9915-11eb-9025-0d57d0421102.png)
