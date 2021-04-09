@@ -46,6 +46,11 @@ Após a vizualização do boxplot, não foi identificado outliers, assim não fo
 - **Platinum:** O `credit_limit` para esssa família é determinado no intervalo entre [51.000 - 200.000].
 - **Premium:** Para essa família não foi possível determinar um intervlo de limite, apenas é possível concluir que se o `credit_limit` > 200.000 a `card_family` é **Premium**.
 
+### - For the transactions flagged as fraud, what are the ids of the transactions with the highest value?
+
+Para esse desafio foi preciso fazer a seleção das `frauds` detro do *dataset* `transactions`, apartir disso foi gerado um novo *dataset* contendo apenas as transações fraudulentas, esse novo *dataset* foi organizado em ordem decrescente de acordo com a coluna `value`. Com isso para obter o `id` da transação fraudulenta de maior valor, bastou apenas retornar a primeira linha do *dataset* `frauds_transactions`.
+
+**Conclusão:** A transação fraudulenta de maior valor tem o `id` = CTID20567160 e o `value` = 49155R$.
  
 
 
